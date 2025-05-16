@@ -1,6 +1,6 @@
 # Dolphyin - inferring 1-Dollo, or persistent, phylogenies from single cell SNV sequencing data
 
-Dolphyin takes in a binary matrix of single cell SNV sequencing data and outputs a 1-Dollo phylogeny on this data, or a rooted tree on which each character / SNV is gained and lost at most once. Underlying Dolphyin is a theoretical characterization and decomposition of all data matrices admitting a 1-Dollo phylogeny, which is turn stems from recursively breaking 1-Dollo phylogenies into 1-Dollo linear phylogenies characterizable with the consecutive ones property.
+Dolphyin takes in a binary matrix of single cell SNV sequencing data and outputs a 1-Dollo phylogeny on this data, or a rooted tree on which each character / SNV is gained and lost at most once. Underlying Dolphyin is a theoretical characterization and decomposition of all data matrices admitting a 1-Dollo phylogeny, which is turn stems from recursively breaking 1-Dollo phylogenies into 1-Dollo linear phylogenies characterizable with the consecutive ones property (Fulkerson and Gross (1965)).
 
 ![Overview of Dolphyin's 1-Dollo decomposition](summary-figure.png)
 
