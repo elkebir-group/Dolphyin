@@ -53,7 +53,7 @@ To compile the additional check-FN in C++, execute the following commands from t
 ### I/O formats
 The input to Dolphyin is a .csv or .txt file that, after two lines which denote the number of m cells and n sequenced SNVs, contains m rows and n columns where m is the the number of single cells and n is the number of mutations. All entries in the .csv file should be either 1 if SNV j is present in cell i and 0 otherwise. Dolphyin's second parameter is a .txt file location to which it will write the clades of the returned 1-Dollo phylogeny. Lastly, Dolphyin takes in parameters p, e, and seed for error correction. p denotes the percentage of row pairs to randomly consider for error correction, e denotes the normalized Hamming distance that each row pair must be under in order to correct both by replacing each with their bitwise OR, and seed is a randomness seed for this error correction.
 
-The input to check-FN is a .csv or .txt file of the original data, the .txt file of Dolphyin's output tree, a .txt file to which the false negative count and false negative rate is written, and an optional .txt file to which a Graphvis tree visualization will be written.
+The input to check-FN is a .csv or .txt file of the original data, the .txt file of Dolphyin's output tree, a .txt file to which the false negative count and false negative rate is written, and an optional .txt file to which a [Graphvis](https://graphviz.org/) tree visualization will be written.
 
 
 ```
@@ -72,3 +72,19 @@ The following is an example of how to use Dolphyin.
 ./src/run-dolphyin.o input/sims/errors/m25_n25_s1_k1_loss0.1.txt output-m25_n25_s1_k1_loss0.1.txt 0.25 0.00 1
 
 ```
+
+The following is an example of how to use the check-FN executable to get the false-negative rate and [Graphvis](https://graphviz.org/) phylogeny visualization file of Dolphyin's output.
+
+```
+./src/check-FN.o input/sims/errors/m25_n25_s1_k1_loss0.1.txt output-m25_n25_s1_k1_loss0.1.txt output-m25_n25_s1_k1_loss0.1-FNrate.txt output-m25_n25_s1_k1_loss0.1-vis.txt
+
+```
+
+The following is an example of how to Graphvis to examine a phylogeny after using Dolphyin and the check-FN executable. Dolphyin and the check-FN executable are not dependent on the installation of Graphvis. The visualization file can be editted to customize the resulting image (removing the explicit labeling of nodes mapping to 0 taxa, labeling characters with other identifiers, etc.) Below is Graphvis's uneditted output.
+
+```
+dot -Tsvg output-m25_n25_s1_k1_loss0.1-vis.txt
+
+```
+
+![Graphvis visualization](example-visualization.png)
