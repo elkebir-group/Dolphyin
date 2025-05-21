@@ -1,6 +1,6 @@
 # Dolphyin - inferring 1-Dollo, or persistent, phylogenies from single cell SNV sequencing data
 
-Dolphyin takes in a binary matrix of single cell SNV sequencing data and outputs a 1-Dollo phylogeny on this data, or a rooted tree on which each character / SNV is gained and lost at most once. Underlying Dolphyin is a theoretical characterization and decomposition of all data matrices admitting a 1-Dollo phylogeny, which is turn stems from recursively breaking 1-Dollo phylogenies into 1-Dollo linear phylogenies characterizable with the consecutive ones property.
+Dolphyin takes in a binary matrix of single cell SNV sequencing data and outputs a 1-Dollo phylogeny on this data, or a rooted tree on which each character / SNV is gained and lost at most once. Underlying Dolphyin is a theoretical characterization and decomposition of all data matrices admitting a 1-Dollo phylogeny, which is turn stems from recursively breaking 1-Dollo phylogenies into 1-Dollo linear phylogenies characterizable with the consecutive ones property (Fulkerson and Gross (1965)).
 
 ![Overview of Dolphyin's 1-Dollo decomposition](summary-figure.png)
 
@@ -72,6 +72,7 @@ The following is an example of how to use Dolphyin.
 ./src/run-dolphyin.o input/sims/errors/m25_n25_s1_k1_loss0.1.txt output-m25_n25_s1_k1_loss0.1.txt 0.25 0.00 1
 
 ```
+<<<<<<< HEAD
 
 The following is an example of how to use the check-FN executable to get the false-negative rate and [Graphvis](https://graphviz.org/) phylogeny visualization file of Dolphyin's output.
 
@@ -88,3 +89,5 @@ dot -Tsvg output-m25_n25_s1_k1_loss0.1-vis.txt
 ```
 
 ![Graphvis visualization](example-visualization.png)
+=======
+>>>>>>> 8caef5c8059f4e4a4161b4846ef10a2256a48ba3
