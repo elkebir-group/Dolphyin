@@ -72,7 +72,6 @@ The following is an example of how to use Dolphyin.
 ./src/run-dolphyin.o input/sims/errors/m25_n25_s1_k1_loss0.1.txt output-m25_n25_s1_k1_loss0.1.txt 0.25 0.00 1
 
 ```
-<<<<<<< HEAD
 
 The following is an example of how to use the check-FN executable to get the false-negative rate and [Graphvis](https://graphviz.org/) phylogeny visualization file of Dolphyin's output.
 
@@ -81,7 +80,7 @@ The following is an example of how to use the check-FN executable to get the fal
 
 ```
 
-The following is an example of how to Graphvis to examine a phylogeny after using Dolphyin and the check-FN executable. Dolphyin and the check-FN executable are not dependent on the installation of Graphvis. The visualization file can be editted to customize the resulting image (removing the explicit labeling of nodes mapping to 0 taxa, labeling characters with other identifiers, etc.) Below is Graphvis's uneditted output.
+The following is an example of how to Graphvis to examine a phylogeny after using Dolphyin and the check-FN executable. Dolphyin and the check-FN executable are not dependent on the installation of Graphvis. The visualization file can be editted to customize the result (removing the explicit labeling of nodes mapping to 0 taxa, labeling characters with other identifiers, etc.)
 
 ```
 dot -Tsvg output-m25_n25_s1_k1_loss0.1-vis.txt
@@ -89,5 +88,3 @@ dot -Tsvg output-m25_n25_s1_k1_loss0.1-vis.txt
 ```
 
 ![Graphvis visualization](example-visualization.png)
-=======
->>>>>>> 8caef5c8059f4e4a4161b4846ef10a2256a48ba3
